@@ -396,7 +396,7 @@ open class FAPanelController: UIViewController {
     //  Panel States
 
     internal  var _state: FAPanelVisibleState = .center
-    internal  var  state: FAPanelVisibleState {
+    public  var  state: FAPanelVisibleState {
         get{
             return _state
         }
