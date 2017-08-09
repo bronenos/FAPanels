@@ -89,6 +89,8 @@ open class FAPanelConfigurations: NSObject {
     open var canLeftSwipe : Bool = true
     open var canRightSwipe: Bool = true
     
+    open var dimmingColor = UIColor.clear
+    
     
     
     

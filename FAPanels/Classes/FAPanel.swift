@@ -301,8 +301,8 @@ open class FAPanelController: UIViewController {
                 _tapView?.removeFromSuperview()
                 _tapView = newValue
                 if _tapView != nil {
-                    
                     _tapView?.frame = centerPanelContainer.bounds
+                    _tapView?.backgroundColor = dimmingColor
                     _tapView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
                     addTapGestureToView(view: _tapView!)
                     if configs.canRecognizePanGesture {
