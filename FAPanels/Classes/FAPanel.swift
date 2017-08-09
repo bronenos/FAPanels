@@ -176,7 +176,7 @@ open class FAPanelController: UIViewController {
     
     
     internal var _leftPanelVC: UIViewController? = nil
-    internal var leftPanelVC : UIViewController? {
+    public var leftPanelVC : UIViewController? {
         
         get{
             return _leftPanelVC
@@ -203,7 +203,7 @@ open class FAPanelController: UIViewController {
     
     
     internal var _rightPanelVC: UIViewController? = nil
-    internal var rightPanelVC : UIViewController? {
+    public var rightPanelVC : UIViewController? {
         
         get{
             return _rightPanelVC
