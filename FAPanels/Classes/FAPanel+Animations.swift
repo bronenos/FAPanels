@@ -470,8 +470,17 @@ extension FAPanelController {
             unloadPanels()
         }
         
-        tapView = nil
         handleScrollsToTopForContainers(centerEnabled: true, leftEnabled: false, rightEnabled: false)
+        
+        UIView.animate(
+            withDuration: TimeInterval(configs.maxAnimDuration),
+            animations: { [unowned self] in
+                self.tapView?.backgroundColor = UIColor.clear
+            },
+            completion: { [unowned self] _ in
+                self.tapView = nil
+            }
+        )
     }
     
     
@@ -485,7 +494,17 @@ extension FAPanelController {
         else {
             updateCenterPanelContainer()
         }
+        
         tapView = UIView()
+        tapView?.backgroundColor = UIColor.clear
+        
+        UIView.animate(
+            withDuration: TimeInterval(configs.maxAnimDuration),
+            animations: { [unowned self] in
+                self.tapView?.backgroundColor = self.configs.dimmingColor
+            },
+            completion: nil
+        )
     }
     
     

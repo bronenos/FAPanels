@@ -302,7 +302,6 @@ open class FAPanelController: UIViewController {
                 _tapView = newValue
                 if _tapView != nil {
                     _tapView?.frame = centerPanelContainer.bounds
-                    _tapView?.backgroundColor = configs.dimmingColor
                     _tapView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
                     addTapGestureToView(view: _tapView!)
                     if configs.canRecognizePanGesture {
@@ -361,21 +360,21 @@ open class FAPanelController: UIViewController {
     
     internal func applyStyle(onContainer: UIView, withDuration duration: TimeInterval, animated: Bool) {
         
-        let shadowPath: UIBezierPath = UIBezierPath(roundedRect: onContainer.bounds, cornerRadius: 0.0)
-        
-        if animated {
-            
-            let animation = CABasicAnimation(keyPath: "shadowPath")
-            animation.fromValue = onContainer.layer.shadowPath
-            animation.toValue = shadowPath.cgPath
-            animation.duration = duration
-            onContainer.layer.add(animation, forKey: "shadowPath")
-        }
-        onContainer.layer.shadowPath = shadowPath.cgPath
-        onContainer.layer.shadowColor = UIColor.black.cgColor
-        onContainer.layer.shadowRadius = 8.0
-        onContainer.layer.shadowOpacity = 0.70
-        onContainer.clipsToBounds = false
+//        let shadowPath: UIBezierPath = UIBezierPath(roundedRect: onContainer.bounds, cornerRadius: 0.0)
+//        
+//        if animated {
+//            
+//            let animation = CABasicAnimation(keyPath: "shadowPath")
+//            animation.fromValue = onContainer.layer.shadowPath
+//            animation.toValue = shadowPath.cgPath
+//            animation.duration = duration
+//            onContainer.layer.add(animation, forKey: "shadowPath")
+//        }
+//        onContainer.layer.shadowPath = shadowPath.cgPath
+//        onContainer.layer.shadowColor = UIColor.black.cgColor
+//        onContainer.layer.shadowRadius = 8.0
+//        onContainer.layer.shadowOpacity = 0.70
+//        onContainer.clipsToBounds = false
     }
     
     
