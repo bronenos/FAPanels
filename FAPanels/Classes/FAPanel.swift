@@ -77,11 +77,6 @@ open class FAPanelController: UIViewController {
     // MARK:- Life Cycle
     
     
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
-    
-    
     override open func viewDidLoad() {
 
         super.viewDidLoad()
